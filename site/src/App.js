@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import './App.css';
 import Home from './pages/Home'
 import Projects from './pages/Projects'
+import NotFound from './pages/NotFound'
 
 class App extends Component {
 
@@ -36,6 +37,7 @@ class App extends Component {
               <Switch>
                 <Route exact path='/' render={props => <Home projects={this.projects}/>}/>
                 <Route path='/Projects' render={props => <Projects projects={this.projects}/>}/>
+                <Route component={NotFound}/>
               </Switch>
           </div>
         </BrowserRouter>
